@@ -1,6 +1,6 @@
 import os
 import argparse
-from .gpu_info import GPU_Monitor
+from src.gpu_info import GPU_Monitor
 
 
 def parse_arguments():
