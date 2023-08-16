@@ -3,6 +3,11 @@ Help you find free gpu and analyze gpu usage when using a gpu server shared with
 
 People usually used a gpu server shared with others, it is annoying to set free gpu every time, and it is difficult to know who is using the gpu and how much memory they used. You can use this tool to show some basic information about the gpu server.
 
+
+[![PyPI](https://img.shields.io/pypi/v/gpustatus?color=blue)](https://pypi.org/project/gpustatus/)
+[![py\_versions](https://img.shields.io/badge/python-3.7%2B-blue)](https://pypi.org/pypi/gpustatus/)
+
+
 ## Install
 ## From Pip
 ```bash
