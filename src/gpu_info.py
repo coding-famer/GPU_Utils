@@ -196,8 +196,10 @@ class GPU_Monitor:
         self.user = self.get_user()
     def get_GPU_info(self):
         nvidia_smi = os.popen('nvidia-smi -q -d PIDS |grep -A8 GPU').read().split('\n\n')
-        # nvidia_smi[0] = nvidia_smi[0][46:]
-        gpu_list_info = [i.split('\n') for i in nvidia_smi][1:-1]
+        first_gpu = nvidia_smi[0]
+        gpu_num = int(first_gpu[first_gpu.find(':')+1:first_gpu.find('\n')])
+        nvidia_smi[0] = first_gpu[first_gpu.find('\n')+1:]
+        gpu_list_info = [i.split('\n') for i in nvidia_smi][0:-1]
         gpu_num = len(gpu_list_info)+1
         gpu_list = GPU_list(gpu_num)
         for g in range(len(gpu_list_info)):
